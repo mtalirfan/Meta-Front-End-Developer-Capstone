@@ -1,13 +1,19 @@
-function Nav() {
+import React from "react";
+import { Link } from "react-router-dom";
+import logo from "../images/Logo.svg";
+import "./Nav.css";
+
+const Nav = () => {
     return (
         <nav>
+            <Link to="/"><img src={logo} alt="Logo"></img></Link>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Menu</a></li>
-                <li><a href="#">Reservations</a></li>
-                <li><a href="#">Order Online</a></li>
-                <li><a href="#">Login</a></li>
+                <li><Link to="/">Home</Link></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><Link to="/booking">Reservations</Link></li>
+                <li><a href="#order-online">Order Online</a></li>
+                <li><a href="#login">Login</a></li>
             </ul>
         </nav>
     );
